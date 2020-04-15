@@ -6,18 +6,11 @@ import DisplayData from './DisplayData';
     state = {
       firstName: "",
       lastName: "",
-      submittedData: []
     }
 
-    handleFirstNameChange = event => {
-      this.setState({
-        firstName: event.target.value
-      })
-    }
-
-    handleLastNameChange = event => {
-      this.setState({
-        lastName: event.target.value
+    handleChange = event => {
+      this.setState( {
+        [event.target.name]: event.target.value
       })
     }
 
@@ -27,8 +20,7 @@ import DisplayData from './DisplayData';
           <Form formData = {
             this.state
           }
-            handleFirstNameChange={this.handleFirstNameChange}
-            handleLastNameChange={this.handleLastNameChange}/>
+            handleChange={this.handleChange}/>
             <DisplayData formData={this.state}/>
         </div>
       )
