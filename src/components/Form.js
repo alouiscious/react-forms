@@ -4,8 +4,6 @@ class Form extends React.Component {
 
   // abstracting the onchange with event targets
 
-
-
   render() {
     return (
       <div>
